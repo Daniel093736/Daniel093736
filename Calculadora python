@@ -1,0 +1,58 @@
+#inportar a biblioteca math
+
+import math
+
+#decoração
+
+decora = '=-'*25
+
+#menu
+
+print('\033[35m{}\n\033[33mbem-vindo a calculadora python\nmenu:\n1 = +\n2 = -\n3 = X\n4 = V¨¨\n5 = hipotenza\033[35m\n{}'.format(decora, decora))
+
+#loop while
+
+while True:
+#escolher o tipo de conta matemática
+
+    esc = str(input('escolha que tipo de conta matemática irá fazer segundo o menu: '))
+
+#soma
+
+    if esc == '1':
+        math1 = int(input('escolha o primeiro valor para somar: '))
+        math2 = int(input('escolha o segundo valor para somar: '))
+        soma = math1+math2
+        print('  {}\n + \n  {}\n ____\n  {}'.format(math1, math2, soma))
+
+#subitração
+
+    elif esc == '2':
+        math1 = int(input('escolha o primeiro valor para subtrair: '))
+        math2 = int(input('escolha o segundo valor para subtrair: '))
+        sub = math1-math2
+        print('  {}\n - \n  {}\n ____\n  {}'.format(math1, math2, sub))
+
+#multiplicação
+
+    elif esc == '3':
+        math1 = int(input('escolha o primeiro valor para multiplicar: '))
+        math2 = int(input('escolha o segundo valor para multiplicar: '))
+        mult = math1*math2
+        print('  {}\n X \n  {}\n ____\n  {}'.format(math1, math2, mult))  
+
+#raíz quadrada
+
+    elif esc == '4':
+        math1 = int(input('escolha um valor no qual você queira saber sua raíz quadrada: '))
+        raiz = math.sqrt(math1)
+        print('V¨¨{} = {:.2}'.format(math1, raiz))
+
+#hipotenuza
+
+    elif esc == '5':
+        co = float(input('entre com um valor um valor para o cateto oposto: '))
+        ca = float(input('entre com um valor um valor para o cateto adjacente: '))
+        soma = ca**2+co**2
+        hipo = math.sqrt(soma)
+        print('a hipotenuz do triângulo é {:.2}'.format(hipo))
